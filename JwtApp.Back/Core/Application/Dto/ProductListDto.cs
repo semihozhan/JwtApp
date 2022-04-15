@@ -1,0 +1,14 @@
+﻿using JwtApp.Back.Core.Domain;
+
+namespace JwtApp.Back.Core.Application.Dto
+{
+    public class ProductListDto
+    {
+        public int Id { get; set; }
+        public string? Name { get; set; }
+        public int Stock { get; set; }
+        public decimal Price { get; set; }
+        public int CategoryID { get; set; }
+        public Category Category { get; set; }
+    }
+}
