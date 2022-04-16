@@ -46,9 +46,16 @@ namespace JwtApp.Back.Controllers
 
 
         [HttpPut]
-        public async Task<IActionResult> Update(CreateCategoryCommandQuery createCategoryCommandQuery)
+        public async Task<IActionResult> Update(UpdateCategoryCommandQuery updateCategoryCommandQuery)
         {
-            await mediator.Send(createCategoryCommandQuery);
+            await mediator.Send(updateCategoryCommandQuery);
+            return NoContent();
+        }
+
+        [HttpDelete]
+        public async Task<IActionResult> Delete(DeleteCategoryCommandQuery deleteCategoryCommandQuery)
+        {
+            await mediator.Send(deleteCategoryCommandQuery);
             return NoContent();
         }
     }
