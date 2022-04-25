@@ -14,7 +14,7 @@ namespace JwtApp.Back.Controllers
     [Authorize(Roles ="Admin,Member")]
     public class ProductsController : ControllerBase
     {
-        private readonly IMediator mediator;
+        private readonly IMediator mediator; 
 
         public ProductsController(IMediator mediator)
         {
