@@ -27,6 +27,7 @@ namespace JwtApp.Back.Controllers
             await _mediator.Send(registerUserCommandQuery);
             return Created("", registerUserCommandQuery);
         }
+         
 
 
 
